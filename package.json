@@ -1,0 +1,50 @@
+{
+  "name": "atyplib",
+  "version": "0.0.1",
+  "description": "A typescript lib",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "esfix": "eslint --ext .ts --fix src/",
+    "eslint": "eslint --ext .ts src/",
+    "postversion": "git push && git push --tags",
+    "prebuild": "npm run clean",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run esfix",
+    "preversion": "npm run esfix",
+    "version": "git add -A",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyanghai/atyplib.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyanghai/atyplib/issues"
+  },
+  "homepage": "https://github.com/hyanghai/atyplib#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.8",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^24.7.1",
+    "prettier": "^1.17.0",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {},
+  "files": [
+    "dist/**/*"
+  ]
+}

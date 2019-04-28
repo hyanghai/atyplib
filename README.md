@@ -1,0 +1,2 @@
+# atyplib
+A typescript lib
